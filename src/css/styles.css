@@ -5,8 +5,7 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -23,3 +22,102 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+*,::after,::before{
+  box-sizing: border-box;
+}
+.wrapper {
+  padding: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formForSearch {
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 5px;
+  background: #d8c9d6;
+  margin-bottom: 50px;
+}
+.inputForSearch {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 30px;
+}
+.btnForSearch {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f73e3e;
+  transition: background-color .3s ease-in-out ;
+}
+.btnForSearch:hover{
+  background-color: #f87272;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  width: 100%;
+}
+
+.gallery-item {
+  flex-basis: calc((100% - 100px) / 4);
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+.info {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.stat{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.stat h3 {
+  font-size: 16px;
+}
+.stat p {
+  font-size: 14px;
+  
+}
+
+.load{
+  display: none;
+  margin-top: 30px;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px dotted #000;
+  border-radius: 50%;
+  display: none;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
